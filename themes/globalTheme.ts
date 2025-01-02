@@ -10,12 +10,6 @@ const globalTheme = createTheme({
         secondary: {
             main: '#431E75', // it is 500 on design style guide,
         },
-        danger: {
-            '500': '#ED4749',
-        },
-        warning: {
-            main: '#FEB101', // it is 500 on design style guide
-        },
     },
     typography: {
         body1: {
