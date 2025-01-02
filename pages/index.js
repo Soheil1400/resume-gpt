@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css';
 import {Grid2, TextField, ThemeProvider, Typography} from "@mui/material";
 import globalTheme from "../themes/globalTheme";
 import LoadingButton from '@mui/lab/LoadingButton';
+import ArticleRoundedIcon from '@mui/icons-material/ArticleRounded';
+import SendRoundedIcon from '@mui/icons-material/SendRounded';
 
 export default function Home() {
     const [message, setMessage] = useState('');
@@ -102,9 +104,12 @@ export default function Home() {
     return (
         <ThemeProvider theme={globalTheme}>
             <Grid2 className={styles.container}>
-                <Typography variant={'body1'} className={styles.title}>
-                    {'سرچ هوشمند رزومه'}
-                </Typography>
+                <Grid2 display={'flex'} justifyContent={'center'}>
+                    <ArticleRoundedIcon sx={{mt: 1, color: 'primary.main', mr: 3}}/>
+                    <Typography variant={'body1'} className={styles.title}>
+                        {'سرچ هوشمند رزومه'}
+                    </Typography>
+                </Grid2>
                 <Grid2 className={styles.chatWindow}>
                     {responses.map((response, index) => (
                         <Typography
@@ -128,7 +133,7 @@ export default function Home() {
                     placeholder="پیام خود را بنویسید ..."
                 />
                 <input type="file" onChange={handleUploadFile} className={styles.fileInput}/>
-                <LoadingButton loading={loading} variant={'contained'} onClick={sendMessage} fullWidth={true}>
+                <LoadingButton endIcon={<SendRoundedIcon/>} loading={loading} variant={'contained'} onClick={sendMessage} fullWidth={true}>
                     <Typography variant={'body1'}>
                         {'ارسال'}
                     </Typography>
