@@ -1,0 +1,90 @@
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #7679EE;
+}
+
+.chatWindow {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.userMessage {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+
+.assistantMessage {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.userMessage .bubble {
+    background: #7679EE;
+    color: #fff;
+    border-bottom-right-radius: 0;
+}
+
+.assistantMessage .bubble {
+    background: #e5e5ea;
+    color: #000;
+    border-bottom-left-radius: 0;
+}
+
+.textArea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.fileInput {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sendButton {
+    width: 100%;
+    padding: 10px;
+    background: #7679EE;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sendButton:hover {
+    background: #005bb5;
+}
