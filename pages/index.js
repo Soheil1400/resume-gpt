@@ -105,8 +105,8 @@ export default function Home() {
         <ThemeProvider theme={globalTheme}>
             <Grid2 className={styles.container}>
                 <Grid2 display={'flex'} justifyContent={'center'}>
-                    <ArticleRoundedIcon sx={{mt: 1, color: 'primary.main', mr: 3}}/>
-                    <Typography variant={'body1'} className={styles.title}>
+                    <ArticleRoundedIcon sx={{color: 'primary.main', mr: 3, mt: 0.5}}/>
+                    <Typography variant={'body1'} color={'primary.main'} sx={{mb: 1}}>
                         {'سرچ هوشمند رزومه'}
                     </Typography>
                 </Grid2>
@@ -115,6 +115,7 @@ export default function Home() {
                         <Typography
                             variant={'body1'}
                             key={index}
+                            sx={{mb: 1}}
                             className={
                                 response.role === 'user' ? styles.userMessage : styles.assistantMessage
                             }
